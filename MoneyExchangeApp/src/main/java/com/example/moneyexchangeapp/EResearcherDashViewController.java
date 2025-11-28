@@ -1,5 +1,8 @@
 package com.example.moneyexchangeapp;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+
 public class EResearcherDashViewController
 {
     @javafx.fxml.FXML
