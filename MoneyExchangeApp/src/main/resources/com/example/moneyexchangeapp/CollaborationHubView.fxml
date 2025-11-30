@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.CollaborationHubViewController">
+   <children>
+      <Label layoutX="220.0" layoutY="27.0" text="Collaboration Hub ">
+         <font>
+            <Font name="Playbill" size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ResearcherListComboBox" layoutX="26.0" layoutY="84.0" prefWidth="150.0" />
+      <Label layoutX="26.0" layoutY="55.0" text="Researcher List :" />
+      <TextArea fx:id="MessageTextArea" layoutX="26.0" layoutY="149.0" prefHeight="200.0" prefWidth="342.0" promptText="Type Your Message" />
+      <Label layoutX="26.0" layoutY="123.0" text="Message :" />
+      <Button layoutX="379.0" layoutY="318.0" mnemonicParsing="false" onAction="#SendMessageButtonOnAction" prefHeight="26.0" prefWidth="209.0" text="Send Message" />
+      <Button layoutX="476.0" layoutY="14.0" mnemonicParsing="false" onAction="#HomeButtonOnAction" prefHeight="26.0" prefWidth="109.0" text="Home" />
+   </children>
+</AnchorPane>

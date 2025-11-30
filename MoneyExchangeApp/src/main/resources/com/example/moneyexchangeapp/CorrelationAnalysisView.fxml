@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.CorrelationAnalysisViewController">
+   <children>
+      <ComboBox fx:id="CurrencyOneComboBox" layoutX="31.0" layoutY="74.0" prefWidth="150.0" promptText="USD" />
+      <ComboBox fx:id="CurrencyTwoComboBox" layoutX="224.0" layoutY="74.0" prefWidth="150.0" promptText="EUR" />
+      <Label layoutX="31.0" layoutY="40.0" text="Currency 1 : " />
+      <Label layoutX="224.0" layoutY="40.0" text="Currency 2 :" />
+      <TextField fx:id="PeriodTextField" layoutX="426.0" layoutY="74.0" promptText="30" />
+      <Label layoutX="426.0" layoutY="40.0" text="Period (Days) : " />
+      <Button layoutX="236.0" layoutY="138.0" mnemonicParsing="false" onAction="#AddCorrelationButtonOnAction" text="Add Correlation" />
+      <TableView fx:id="CorrelationAnalysisTableView" layoutX="-2.0" layoutY="200.0" prefHeight="200.0" prefWidth="608.0">
+        <columns>
+          <TableColumn fx:id="CurrencyOneTableColumn" prefWidth="108.00000309944153" text="Currency 1" />
+          <TableColumn fx:id="CurrencyTwoTableColumn" prefWidth="144.0" text="Currency 2" />
+            <TableColumn fx:id="PeriodTableColumn" prefWidth="88.79997253417969" text="Period" />
+            <TableColumn fx:id="CorrelationValueTableColumn" prefWidth="138.4000244140625" text="Correlation Value" />
+            <TableColumn fx:id="PositiveTableColumn" prefWidth="129.5999755859375" text="Positive/Negative" />
+        </columns>
+      </TableView>
+      <CheckBox fx:id="PositiveCheckBox" layoutX="429.0" layoutY="155.0" mnemonicParsing="false" text="Positive" />
+      <TextField fx:id="CorrelationValueTextField" layoutX="428.0" layoutY="112.0" promptText="Correlation Value" />
+   </children>
+</AnchorPane>

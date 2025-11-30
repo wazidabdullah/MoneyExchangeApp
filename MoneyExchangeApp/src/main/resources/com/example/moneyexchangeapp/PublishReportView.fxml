@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.PublishReportViewController">
+   <children>
+      <Label layoutX="190.0" layoutY="30.0" text="Publish Research Report">
+         <font>
+            <Font name="Playbill" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="99.0" text="Report Title : " />
+      <TextField fx:id="ReportTitleTextField" layoutX="115.0" layoutY="95.0" />
+      <TextField fx:id="ReportTypeTextField" layoutX="115.0" layoutY="130.0" />
+      <Label layoutX="34.0" layoutY="134.0" text="Report Type : " />
+      <Label layoutX="24.0" layoutY="173.0" text="Report Content : " />
+      <TextArea fx:id="ReportContentTextArea" layoutX="115.0" layoutY="173.0" prefHeight="186.0" prefWidth="443.0" />
+      <Button layoutX="454.0" layoutY="106.0" mnemonicParsing="false" onAction="#PublishOnlineButtonOnAction" prefHeight="48.0" prefWidth="104.0" text="Publish Online" />
+   </children>
+</AnchorPane>
