@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.PublishReportViewController">
    <children>
       <Label layoutX="190.0" layoutY="30.0" text="Publish Research Report">
@@ -22,5 +21,6 @@
       <Label layoutX="24.0" layoutY="173.0" text="Report Content : " />
       <TextArea fx:id="ReportContentTextArea" layoutX="115.0" layoutY="173.0" prefHeight="186.0" prefWidth="443.0" />
       <Button layoutX="454.0" layoutY="106.0" mnemonicParsing="false" onAction="#PublishOnlineButtonOnAction" prefHeight="48.0" prefWidth="104.0" text="Publish Online" />
+      <Button layoutX="476.0" layoutY="17.0" mnemonicParsing="false" onAction="#HomeButtonOnAction" prefHeight="26.0" prefWidth="109.0" text="Home" />
    </children>
 </AnchorPane>

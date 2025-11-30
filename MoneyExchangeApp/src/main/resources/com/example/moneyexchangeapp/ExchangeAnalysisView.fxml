@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="323.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.ExchangeAnalysisViewController">
+<AnchorPane prefHeight="331.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.ExchangeAnalysisViewController">
    <children>
       <Label layoutX="43.0" layoutY="28.0" text="Exchange Rate Analysis">
          <font>
@@ -23,5 +22,6 @@
             <Font name="Playbill" size="25.0" />
          </font>
       </Label>
+      <Button layoutX="296.0" layoutY="15.0" mnemonicParsing="false" onAction="#HomeButtonOnAction" prefHeight="26.0" prefWidth="109.0" text="Home" />
    </children>
 </AnchorPane>
