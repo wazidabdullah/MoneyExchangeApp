@@ -6,10 +6,10 @@ public class CorrelationAnalysis {
     private int Period;
     private float CorrelationValue;
 
-    public CorrelationAnalysis(String currencyOne, String currencyTwo, String positive, int period, float correlationValue) {
+    public CorrelationAnalysis(String currencyOne, String currencyTwo, boolean positive, int period, float correlationValue) {
         CurrencyOne = currencyOne;
         CurrencyTwo = currencyTwo;
-        Positive = positive;
+       boolean Positive = positive;
         Period = period;
         CorrelationValue = correlationValue;
     }

@@ -1,7 +1,10 @@
 package com.example.moneyexchangeapp;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 
 public class EResearcherDashViewController
 {
@@ -11,6 +14,8 @@ public class EResearcherDashViewController
     private Label ReportsPublishedLabel;
     @javafx.fxml.FXML
     private Label CollaborationsLabel;
+    @javafx.fxml.FXML
+    private AnchorPane EResearcherDashAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -18,33 +23,97 @@ public class EResearcherDashViewController
 
     @javafx.fxml.FXML
     public void ExchangeAnalysisButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ExchangeAnalysisView.fxml"));
+            Node node = loader.load();
+            EResearcherDashAnchorPane.getChildren().setAll(node);
+        }
+        catch(Exception e) {
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void SummaryStatisticsButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("SummaryStatisticsView.fxml"));
+            Node node = loader.load();
+            EResearcherDashAnchorPane.getChildren().setAll(node);
+        }
+        catch(Exception e) {
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void ScheduleAnalysisButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ScheduleAnalysisView.fxml"));
+            Node node = loader.load();
+            EResearcherDashAnchorPane.getChildren().setAll(node);
+        }
+        catch(Exception e) {
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void ModelComparisonButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ModelComparisonView.fxml"));
+            Node node = loader.load();
+            EResearcherDashAnchorPane.getChildren().setAll(node);
+        }
+        catch(Exception e) {
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void CorrelationAnalysisButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CorrelationAnalysisView.fxml"));
+            Node node = loader.load();
+            EResearcherDashAnchorPane.getChildren().setAll(node);
+        }
+        catch(Exception e) {
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void CollaborationHubButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CollaborationHubView.fxml"));
+            Node node = loader.load();
+            EResearcherDashAnchorPane.getChildren().setAll(node);
+        }
+        catch(Exception e) {
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void ForecastModelsButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ForecastModelView.fxml"));
+            Node node = loader.load();
+            EResearcherDashAnchorPane.getChildren().setAll(node);
+        }
+        catch(Exception e) {
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void PublishReportButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PublishReportView.fxml"));
+            Node node = loader.load();
+            EResearcherDashAnchorPane.getChildren().setAll(node);
+        }
+        catch(Exception e) {
+            //
+        }
     }
 }

@@ -2,11 +2,11 @@ package com.example.moneyexchangeapp;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.StrokeLineCap;
 
 import java.time.LocalDate;
@@ -20,13 +20,15 @@ public class ForecastModelViewController
     @javafx.fxml.FXML
     private TableColumn<ForecastModel , Integer> ConfidenceTableColumn;
     @javafx.fxml.FXML
-    private TableColumn<ForecastModel , DatePicker> DateColumn;
+    private TableColumn<ForecastModel , LocalDate> DateColumn;
     @javafx.fxml.FXML
     private TableColumn<ForecastModel , String> RecommendationTableColumn;
     @javafx.fxml.FXML
     private TableColumn<ForecastModel , String> TrendTableColumn;
     @javafx.fxml.FXML
     private TableColumn<ForecastModel , Float> PredictedRateTableColumn;
+    @javafx.fxml.FXML
+    private AnchorPane ForecastModelAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -75,9 +77,36 @@ public class ForecastModelViewController
 
     @javafx.fxml.FXML
     public void PredictButtonOnAction(ActionEvent actionEvent) {
+        String selectedPair = CurrencyPairComboBox.getValue();
+
+        if (selectedPair == null) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Missing Selection");
+            alert.setContentText("Please select a currency pair to see predictions.");
+            alert.show();
+            return;
+        }
+
+        // Filter the pre-existing items in the table for the selected currency pair
+        var filteredList = ForecastModelTableView.getItems().stream()
+                .filter(f -> f.getCurrencyPair().equals(selectedPair))
+                .toList(); // Java 16+, otherwise use FXCollections.observableArrayList
+
+        // Clear current table
+        ForecastModelTableView.getItems().clear();
+
+        // Add filtered data
+        ForecastModelTableView.getItems().addAll(filteredList);
     }
 
     @javafx.fxml.FXML
     public void HomeButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("EResearcherDashView.fxml"));
+            Node node = loader.load();
+            ForecastModelAnchorPane.getChildren().setAll(node);
+        } catch (Exception e) {
+            //
+        }
     }
 }

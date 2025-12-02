@@ -2,9 +2,13 @@ package com.example.moneyexchangeapp;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 
 public class ModelComparisonViewController
 {
@@ -22,9 +26,18 @@ public class ModelComparisonViewController
     private TableColumn<ModelComparison ,String> TrendTableColumn;
     @javafx.fxml.FXML
     private TableColumn<ModelComparison , Float> BuyRateTableColumn;
+    @javafx.fxml.FXML
+    private AnchorPane ModelComparisonAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        CurrencyPairTableColumn.setCellValueFactory(new PropertyValueFactory<>("currencyPair"));
+        TrendTableColumn.setCellValueFactory(new PropertyValueFactory<>("trend"));
+        RecommendationTableColumn.setCellValueFactory(new PropertyValueFactory<>("recommendation"));
+        BuyRateTableColumn.setCellValueFactory(new PropertyValueFactory<>("buyRate"));
+        PerformanceTableColumn.setCellValueFactory(new PropertyValueFactory<>("performanceScore"));
+
         ModelComparisonTableView.setItems(FXCollections.observableArrayList(
                 new ModelComparison("USD/EUR", "Uptrend", "Buy", 1.09f, 85f),
                 new ModelComparison("USD/BDT", "Stable", "Hold", 119.5f, 70f),
@@ -53,9 +66,34 @@ public class ModelComparisonViewController
     @javafx.fxml.FXML
     public void FindBestPerformerButtonOnAction(ActionEvent actionEvent) {
 
+        ModelComparison best = null;
+
+        for (ModelComparison mc : ModelComparisonTableView.getItems()) {
+            if (best == null || mc.getBuyRate() > best.getBuyRate()) {
+                best = mc;
+            }
+        }
+
+        if (best != null) {
+            FindBestPerformerLabel.setText(
+                    "Best Performer: " + best.getCurrencyPair() +
+                            " (Buy Rate: " + best.getBuyRate() + ")"
+            );
+        } else {
+            FindBestPerformerLabel.setText("No data available!");
+        }
+
     }
 
     @javafx.fxml.FXML
     public void HomeButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("EResearcherDashView.fxml"));
+            Node node = loader.load();
+            ModelComparisonAnchorPane.getChildren().setAll(node);
+        } catch (Exception e) {
+            //
+        }
     }
 }
