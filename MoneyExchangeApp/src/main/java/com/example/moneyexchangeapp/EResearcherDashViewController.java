@@ -1,5 +1,7 @@
 package com.example.moneyexchangeapp;
 
+import javafx.scene.control.Label;
+
 public class EResearcherDashViewController
 {
     @javafx.fxml.FXML

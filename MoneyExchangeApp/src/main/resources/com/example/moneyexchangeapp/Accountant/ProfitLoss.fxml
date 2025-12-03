@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.ProfitLossController">
+   <children>
+      <Label layoutX="211.0" layoutY="14.0" text="Daily Profit &amp; Loss Calculation">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpDate" layoutX="124.0" layoutY="63.0" />
+      <Label layoutX="51.0" layoutY="67.0" text="Select Date" />
+      <Button fx:id="btnCalculate" layoutX="92.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleCalculate" text="Calculate" />
+      <Button fx:id="btnUpdateSheet" layoutX="427.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleUpdateSheet" text="Update Balance Sheet" />
+      <TableView layoutX="157.0" layoutY="117.0" prefHeight="109.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="colPLCurrency" prefWidth="75.0" text="Currency" />
+          <TableColumn fx:id="colBuy" prefWidth="75.0" text="Buy Total" />
+            <TableColumn fx:id="colSell" prefWidth="75.0" text="Sell Total" />
+            <TableColumn fx:id="colPL" prefWidth="75.0" text="Profit/Loss" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblPLMessage" layoutX="97.0" layoutY="317.0" text="“Report Generated Successfully”" />
+   </children>
+</AnchorPane>

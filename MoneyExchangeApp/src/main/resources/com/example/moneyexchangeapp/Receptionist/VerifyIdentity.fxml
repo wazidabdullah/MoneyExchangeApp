@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.VerifyIdentityController">
+   <children>
+      <Label layoutX="184.0" layoutY="24.0" text="Customer Identity Verification">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="75.0" text="NID/Passport Number" />
+      <Label layoutX="52.0" layoutY="125.0" text="Verification Result" />
+      <TextField fx:id="txtIdentityNumber" layoutX="159.0" layoutY="71.0" />
+      <TextField fx:id="txtVerificationResult" layoutX="159.0" layoutY="121.0" />
+      <Button fx:id="btnVerifyIdentity" layoutX="184.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleVerifyIdentity" text="Verify" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.ComplianceDashboardController">
+   <children>
+      <Button fx:id="btnViewDetails" layoutX="72.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleViewDetails" text="View Details" />
+      <Button fx:id="btnMarkResolved" layoutX="433.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleResolve" text="Mark as Resolved" />
+      <TableView layoutX="164.0" layoutY="56.0" prefHeight="130.0" prefWidth="262.0">
+        <columns>
+          <TableColumn fx:id="colIndicator" prefWidth="75.0" text="Indicator" />
+          <TableColumn fx:id="colStatus" prefWidth="108.6666259765625" text="Status (OK/Issue)" />
+            <TableColumn fx:id="colDescription" prefWidth="76.66668701171875" text="Description" />
+        </columns>
+      </TableView>
+      <TableView layoutX="164.0" layoutY="246.0" prefHeight="130.0" prefWidth="262.0">
+        <columns>
+          <TableColumn fx:id="colCLDate" prefWidth="83.33334350585938" text="Date" />
+          <TableColumn fx:id="colCLI" prefWidth="91.33331298828125" text="Issue" />
+            <TableColumn fx:id="colCLS" prefWidth="90.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="178.0" layoutY="14.0" text="Regulatory Compliance Dashboard">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
