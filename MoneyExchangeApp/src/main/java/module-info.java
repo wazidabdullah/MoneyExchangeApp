@@ -1,7 +1,11 @@
 module com.example.moneyexchangeapp {
     requires javafx.controls;
     requires javafx.fxml;
+<<<<<<< HEAD
     requires java.desktop;
+=======
+    requires javafx.graphics;
+>>>>>>> 12cb7ffbe734528ef9b421d610790c4cc5e90fc5
 
 
     opens com.example.moneyexchangeapp to javafx.fxml;

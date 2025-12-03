@@ -1,9 +1,12 @@
 package com.example.moneyexchangeapp;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class PublishReportViewController
 {
@@ -13,6 +16,8 @@ public class PublishReportViewController
     private TextField ReportTypeTextField;
     @javafx.fxml.FXML
     private TextField ReportTitleTextField;
+    @javafx.fxml.FXML
+    private AnchorPane PublishReportAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -31,6 +36,17 @@ public class PublishReportViewController
 
     @javafx.fxml.FXML
     public void HomeButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("EResearcherDashView.fxml"));
+            Node node = loader.load();
+            PublishReportAnchorPane.getChildren().setAll(node);
+
+        }
+
+        catch (Exception e) {
+            //
+        }
 
         }
 }

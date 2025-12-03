@@ -1,8 +1,11 @@
 package com.example.moneyexchangeapp;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -23,6 +26,8 @@ public class ScheduleAnalysisViewController
     private TextField AnalysisTypeTextField;
     @javafx.fxml.FXML
     private TableColumn<ScheduleAnalysis , String> AnalysisTypeTableColumn;
+    @javafx.fxml.FXML
+    private AnchorPane ScheduleAnalysisAnchorPane;
     //private final ArrayList<ScheduleAnalysis> ScheduledAnalysisList = new ArrayList<>();
 
     @javafx.fxml.FXML
@@ -54,5 +59,13 @@ public class ScheduleAnalysisViewController
 
     @javafx.fxml.FXML
     public void HomeButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("EResearcherDashView.fxml"));
+            Node node = loader.load();
+            ScheduleAnalysisAnchorPane.getChildren().setAll(node);
+        } catch (Exception e) {
+            //
+        }
     }
 }
