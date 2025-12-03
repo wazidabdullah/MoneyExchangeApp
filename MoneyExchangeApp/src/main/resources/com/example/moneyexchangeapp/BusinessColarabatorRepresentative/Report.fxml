@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.BusinessCollaboratorRepresentative.ReportController">
+    <children>
+        <Label layoutX="37.0" layoutY="32.0" text="Report Generator">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="37.0" layoutY="80.0" text="Standard Reports" />
+        <ComboBox fx:id="reportTypeBox" layoutX="150.0" layoutY="76.0" prefWidth="200.0" promptText="Select Type" />
+        <Button layoutX="370.0" layoutY="76.0" mnemonicParsing="false" onAction="#onGeneratePDF" text="Download PDF" />
+
+        <Separator layoutX="37.0" layoutY="130.0" prefWidth="420.0" />
+
+        <Label layoutX="37.0" layoutY="155.0" text="Reconciliation" />
+        <TextField fx:id="partnerIdField" layoutX="150.0" layoutY="151.0" prefWidth="200.0" promptText="Partner ID" />
+        <Button layoutX="370.0" layoutY="151.0" mnemonicParsing="false" onAction="#onReconcilePartner" text="Run Report" />
+
+        <Label fx:id="outputLabel" layoutX="37.0" layoutY="220.0" prefHeight="17.0" prefWidth="400.0" text="Waiting for command..." textFill="#096e25" />
+    </children>
+</AnchorPane>

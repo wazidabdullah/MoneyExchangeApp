@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.BusinessCollaboratorRepresentative.TransactionController">
+    <children>
+        <Label layoutX="37.0" layoutY="32.0" text="New Transaction">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="37.0" layoutY="85.0" text="SWIFT Gateway" />
+        <TextField fx:id="swiftCodeField" layoutX="146.0" layoutY="81.0" prefHeight="25.0" prefWidth="216.0" promptText="e.g. BOFAUS3N" />
+
+        <Label layoutX="37.0" layoutY="135.0" text="Amount" />
+        <TextField fx:id="amountField" layoutX="146.0" layoutY="131.0" prefHeight="25.0" prefWidth="216.0" promptText="0.00" />
+
+        <Button layoutX="373.0" layoutY="131.0" mnemonicParsing="false" onAction="#onCalculateNetSettlement" text="Calculate" />
+
+        <Button layoutX="146.0" layoutY="191.0" mnemonicParsing="false" onAction="#onTransmitInstructions" prefHeight="39.0" prefWidth="216.0" text="Transmit Instructions" />
+
+        <Label fx:id="resultLabel" layoutX="37.0" layoutY="261.0" prefHeight="17.0" prefWidth="406.0" text="Waiting for input..." textFill="#5b5b5b" />
+    </children>
+</AnchorPane>
