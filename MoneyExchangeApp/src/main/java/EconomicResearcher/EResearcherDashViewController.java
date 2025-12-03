@@ -1,4 +1,4 @@
-package com.example.moneyexchangeapp;
+package EconomicResearcher;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

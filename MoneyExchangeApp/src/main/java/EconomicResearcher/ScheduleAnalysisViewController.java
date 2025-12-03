@@ -1,4 +1,4 @@
-package com.example.moneyexchangeapp;
+package EconomicResearcher;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class ScheduleAnalysisViewController
 {

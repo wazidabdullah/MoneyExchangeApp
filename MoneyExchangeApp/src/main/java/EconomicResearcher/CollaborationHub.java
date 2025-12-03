@@ -1,4 +1,4 @@
-package com.example.moneyexchangeapp;
+package EconomicResearcher;
 
 public class CollaborationHub {
     private String researcherName , message;

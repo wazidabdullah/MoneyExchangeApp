@@ -6,4 +6,6 @@ module com.example.moneyexchangeapp {
 
     opens com.example.moneyexchangeapp to javafx.fxml;
     exports com.example.moneyexchangeapp;
+    exports EconomicResearcher;
+    opens EconomicResearcher to javafx.fxml;
 }
