@@ -1,4 +1,4 @@
-package EconomicResearcher;
+package com.example.moneyexchangeapp.EconomicResearcher;
 
 import java.time.LocalDate;
 

@@ -3,9 +3,9 @@ module com.example.moneyexchangeapp {
     requires javafx.fxml;
     requires javafx.graphics;
 
-
-    opens com.example.moneyexchangeapp to javafx.fxml;
+    opens com.example.moneyexchangeapp.EconomicResearcher to javafx.fxml, java.base;
+    opens com.example.moneyexchangeapp to javafx.fxml, java.base;
     exports com.example.moneyexchangeapp;
-    exports EconomicResearcher;
-    opens EconomicResearcher to javafx.fxml;
+    //opens com.example.moneyexchangeapp.EconomicResearcher to javafx.fxml , java.base;
+
 }

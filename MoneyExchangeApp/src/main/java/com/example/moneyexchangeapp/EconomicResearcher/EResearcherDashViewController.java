@@ -1,14 +1,12 @@
-package EconomicResearcher;
+package com.example.moneyexchangeapp.EconomicResearcher;
 
-<<<<<<< HEAD
+
+import com.example.moneyexchangeapp.HelloApplication;
 import javafx.scene.control.Label;
-=======
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
->>>>>>> 2f7b428da25864eafa69eb5a19f073ee5c145b14
 
 public class EResearcherDashViewController
 {
@@ -27,13 +25,14 @@ public class EResearcherDashViewController
 
     @javafx.fxml.FXML
     public void ExchangeAnalysisButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("test");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ExchangeAnalysisView.fxml"));
             Node node = loader.load();
             EResearcherDashAnchorPane.getChildren().setAll(node);
         }
         catch(Exception e) {
-            //
+            System.out.println(e);
         }
     }
 

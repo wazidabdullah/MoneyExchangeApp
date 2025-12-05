@@ -1,4 +1,4 @@
-package EconomicResearcher;
+package com.example.moneyexchangeapp.EconomicResearcher;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;

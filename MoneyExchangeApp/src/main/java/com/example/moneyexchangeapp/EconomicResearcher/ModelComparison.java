@@ -1,4 +1,4 @@
-package EconomicResearcher;
+package com.example.moneyexchangeapp.EconomicResearcher;
 
 public class ModelComparison {
     private String currencyPair , recommendation ,trend;
