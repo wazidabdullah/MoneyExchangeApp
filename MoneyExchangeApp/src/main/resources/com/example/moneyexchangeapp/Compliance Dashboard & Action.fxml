@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="com.exampleComplianceDashboardController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.25" prefHeight="500.0" prefWidth="800.0">
+            <items>
+
+                <!-- LEFT SIDE -->
+                <VBox spacing="10">
+                    <children>
+                        <Label text="Compliance Sections" />
+                        <TreeView fx:id="complianceTree">
+                            <root>
+                                <TreeItem value="Compliance">
+                                    <children>
+                                        <TreeItem value="KYC/AML Metrics" />
+                                        <TreeItem value="Pending STR Reports" />
+                                        <TreeItem value="Non-compliant Branches" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+                    </children>
+                </VBox>
+
+                <!-- RIGHT SIDE -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Compliance Dashboard" />
+
+                        <HBox spacing="10">
+                            <children>
+                                <Button text="Refresh Dashboard" fx:id="refreshButton"
+                                        onAction="#handleRefreshDashboard"/>
+                                <Label text="Last updated: -" fx:id="lastUpdatedLabel"/>
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <Label text="Compliance Overview" />
+
+                        <TableView fx:id="complianceTable" prefHeight="300.0">
+                            <columns>
+                                <TableColumn text="Branch/Section" prefWidth="200.0"/>
+                                <TableColumn text="Metric" prefWidth="200.0"/>
+                                <TableColumn text="Status" prefWidth="150.0"/>
+                            </columns>
+                        </TableView>
+
+                        <Separator />
+
+                        <HBox spacing="10">
+                            <children>
+                                <Button text="Take Action / Send Notice" fx:id="takeActionButton"
+                                        onAction="#handleTakeAction"/>
+                                <Label text="Action pending" fx:id="actionStatusLabel"/>
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>
+

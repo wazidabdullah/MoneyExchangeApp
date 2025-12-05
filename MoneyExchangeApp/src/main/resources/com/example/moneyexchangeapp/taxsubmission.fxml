@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="com.exampleTaxSubmissionController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="900.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.30" prefHeight="500.0" prefWidth="900.0">
+            <items>
+
+                <!-- LEFT PANEL -->
+                <VBox spacing="10" prefWidth="250">
+                    <children>
+                        <Label text="Reports Sections" />
+
+                        <TreeView fx:id="reportsTree">
+                            <root>
+                                <TreeItem value="Tax &amp; Regulatory Reports">
+                                    <children>
+                                        <TreeItem value="Monthly Tax Summary" />
+                                        <TreeItem value="VAT Reports" />
+                                        <TreeItem value="Submission History" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+
+                    </children>
+                </VBox>
+
+                <!-- RIGHT PANEL -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Tax &amp; Regulatory Submission Dashboard" />
+
+                        <TableView fx:id="taxTable" prefHeight="250">
+                            <columns>
+                                <TableColumn text="Report Name" prefWidth="200" />
+                                <TableColumn text="Status" prefWidth="150" />
+                                <TableColumn text="Submission Date" prefWidth="150" />
+                            </columns>
+                        </TableView>
+
+                        <HBox spacing="15">
+                            <children>
+                                <Button text="Submit" fx:id="btnSubmit" onAction="#handleSubmit" />
+                                <Button text="Refresh" onAction="#handleRefresh" />
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <Label text="Submission Log" />
+                        <TextArea fx:id="taSubmissionLog" prefHeight="120" editable="false" />
+
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>

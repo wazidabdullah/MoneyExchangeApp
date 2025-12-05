@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="com.exampleSecurityRiskController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="900.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.30" prefHeight="500.0" prefWidth="900.0">
+            <items>
+
+                <!-- LEFT PANEL -->
+                <VBox spacing="10" prefWidth="250">
+                    <children>
+                        <Label text="Security &amp; Risk Sections" />
+
+                        <TreeView fx:id="securityTree">
+                            <root>
+                                <TreeItem value="Security &amp; Risk">
+                                    <children>
+                                        <TreeItem value="Cyber Alerts" />
+                                        <TreeItem value="Unauthorized Logins" />
+                                        <TreeItem value="Data Breach Attempts" />
+                                        <TreeItem value="Audit &amp; Reports" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+
+                    </children>
+                </VBox>
+
+                <!-- RIGHT PANEL -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Security &amp; Risk Dashboard" />
+
+                        <TableView fx:id="incidentTable" prefHeight="250">
+                            <columns>
+                                <TableColumn text="Incident" prefWidth="250" />
+                                <TableColumn text="Status" prefWidth="150" />
+                                <TableColumn text="Reported Time" prefWidth="150" />
+                            </columns>
+                        </TableView>
+
+                        <HBox spacing="15">
+                            <children>
+                                <Button text="Request Review" fx:id="btnReview" onAction="#handleReview" />
+                                <Button text="Resolve" fx:id="btnResolve" onAction="#handleResolve" />
+                                <Button text="Refresh" onAction="#handleRefresh" />
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <Label text="Audit / Report Log" />
+                        <TextArea fx:id="taAuditLog" prefHeight="120" editable="false" />
+
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>

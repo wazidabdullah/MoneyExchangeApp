@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="com.exampleDocumentStorageController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.25" prefHeight="500.0" prefWidth="800.0">
+            <items>
+
+                <!-- LEFT SIDE -->
+                <VBox spacing="10">
+                    <children>
+                        <Label text="Document Categories" />
+                        <TreeView fx:id="documentTree">
+                            <root>
+                                <TreeItem value="Documents">
+                                    <children>
+                                        <TreeItem value="Customer IDs" />
+                                        <TreeItem value="Receipts" />
+                                        <TreeItem value="Others" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+                    </children>
+                </VBox>
+
+                <!-- RIGHT SIDE -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Document Storage" />
+
+                        <HBox spacing="10">
+                            <children>
+                                <Button text="Upload File" fx:id="uploadButton"
+                                        onAction="#handleUploadButton"/>
+                                <Label text="No file selected" fx:id="selectedFileLabel"/>
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <Label text="Uploaded Documents" />
+
+                        <TableView fx:id="documentTable" prefHeight="350.0">
+                            <columns>
+                                <TableColumn text="Document Name" prefWidth="200.0"/>
+                                <TableColumn text="Upload Date" prefWidth="150.0"/>
+                                <TableColumn text="Uploaded By" prefWidth="150.0"/>
+                            </columns>
+                        </TableView>
+
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>
