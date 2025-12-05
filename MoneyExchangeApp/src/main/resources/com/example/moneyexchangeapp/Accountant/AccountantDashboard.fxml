@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.AccountantDashboardController">
+   <children>
+      <Label layoutX="215.0" layoutY="14.0" text="Accountant Control Panel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUser" layoutX="60.0" layoutY="47.0" text="Logged in as:" />
+      <Label fx:id="lblSystemStatus" layoutX="81.0" layoutY="296.0" text="System Status:" />
+      <Label fx:id="lblRole" layoutX="201.0" layoutY="47.0" text="Role: Accountant" />
+      <Button fx:id="btnLogout" layoutX="472.0" layoutY="358.0" mnemonicParsing="false" text="Logout" />
+      <Button fx:id="btnGoRecord" layoutX="69.0" layoutY="100.0" mnemonicParsing="false" onAction="#goRecordTransaction" text="Record Daily Transactions" />
+      <Button fx:id="btnGoReconciliation" layoutX="69.0" layoutY="152.0" mnemonicParsing="false" onAction="#goReconciliation" text="Reconciliation" />
+      <Button fx:id="btnGoLedger" layoutX="69.0" layoutY="200.0" mnemonicParsing="false" onAction="#goLedger" text="Ledger Management" />
+      <Button fx:id="btnGoProfit" layoutX="69.0" layoutY="251.0" mnemonicParsing="false" onAction="#goProfit" text="Daily Profit/Loss" />
+      <Button fx:id="btnGoReport" layoutX="332.0" layoutY="100.0" mnemonicParsing="false" onAction="#goReports" text="Financial Reports" />
+      <Button fx:id="btnGoAudit" layoutX="332.0" layoutY="152.0" mnemonicParsing="false" onAction="#goAudit" text="Transaction Audit" />
+      <Button fx:id="btnGoCompliance" layoutX="332.0" layoutY="200.0" mnemonicParsing="false" onAction="#goCompliance" text="Compliance Dashboard" />
+      <Button fx:id="btnGoBackup" layoutX="332.0" layoutY="251.0" mnemonicParsing="false" onAction="#goBackup" text="Backup &amp; Restore" />
+      <Label fx:id="lblLastLogin" layoutX="81.0" layoutY="324.0" text="Last Login:" />
+      <Label fx:id="lblComplianceCount" layoutX="81.0" layoutY="354.0" text="Pending Compliance Alerts:" />
+   </children>
+</AnchorPane>
