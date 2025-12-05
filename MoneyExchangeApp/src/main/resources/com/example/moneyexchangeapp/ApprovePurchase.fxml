@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="com.exampleApprovePurchaseController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="900.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.30" prefHeight="500.0" prefWidth="900.0">
+            <items>
+
+                <!-- LEFT PANEL -->
+                <VBox spacing="10" prefWidth="250">
+                    <children>
+                        <Label text="Approval Sections" />
+
+                        <TreeView fx:id="approvalTree">
+                            <root>
+                                <TreeItem value="Purchase Approval">
+                                    <children>
+                                        <TreeItem value="Pending Requests" />
+                                        <TreeItem value="Approved Requests" />
+                                        <TreeItem value="Rejected Requests" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+
+                    </children>
+                </VBox>
+
+                <!-- RIGHT PANEL -->
+                <VBox spacing="15">
+
+                    <children>
+
+                        <Label text="Approve Large Currency Purchase" />
+
+                        <GridPane hgap="10" vgap="12">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="30"/>
+                                <ColumnConstraints percentWidth="70"/>
+                            </columnConstraints>
+
+                            <Label text="Request ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfRequestId" editable="false"
+                                       GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                            <Label text="Transaction Amount:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfAmount" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                            <Label text="Rate:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfRate" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                            <Label text="Counterparty Bank:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfBank" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                            <Label text="Limit Check:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                            <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                                <children>
+                                    <Button text="Check" onAction="#handleCheckLimit"/>
+                                    <Label fx:id="lblLimitResult" text="--"/>
+                                </children>
+                            </HBox>
+
+                            <Label text="Notes:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                            <TextArea fx:id="taNotes" prefRowCount="3"
+                                      GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                        </GridPane>
+
+                        <HBox spacing="15">
+                            <children>
+                                <Button text="Approve" fx:id="btnApprove" onAction="#handleApprove"/>
+                                <Button text="Reject" fx:id="btnReject" onAction="#handleReject"/>
+                                <Button text="Refresh" onAction="#handleRefresh"/>
+                            </children>
+                        </HBox>
+
+                        <Separator/>
+
+                        <Label text="Audit Log"/>
+                        <TextArea fx:id="taAudit" prefHeight="120" editable="false"/>
+
+                    </children>
+
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>

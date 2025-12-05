@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane fx:controller="com.exampleBusinessAnalyticsController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="900.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.25" prefHeight="500.0" prefWidth="900.0">
+            <items>
+
+                <!-- LEFT PANEL -->
+                <VBox spacing="10">
+                    <children>
+                        <Label text="Analytics Sections" />
+                        <TreeView fx:id="analyticsTree">
+                            <root>
+                                <TreeItem value="Business Analytics">
+                                    <children>
+                                        <TreeItem value="Profit Margin" />
+                                        <TreeItem value="Currency Stock Levels" />
+                                        <TreeItem value="Branch Performance" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+                    </children>
+                </VBox>
+
+                <!-- RIGHT PANEL -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Business Analytics Dashboard" />
+
+                        <HBox spacing="10">
+                            <children>
+                                <Button text="Refresh Data" fx:id="refreshButton"
+                                        onAction="#handleRefreshData"/>
+                                <Label text="Last updated: -" fx:id="lastUpdatedLabel"/>
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <Label text="Key Metrics Overview" />
+
+                        <TableView fx:id="kpiTable" prefHeight="200.0">
+                            <columns>
+                                <TableColumn text="Metric" prefWidth="200.0"/>
+                                <TableColumn text="Current Value" prefWidth="150.0"/>
+                                <TableColumn text="Trend" prefWidth="150.0"/>
+                            </columns>
+                        </TableView>
+
+                        <Separator />
+
+                        <Label text="Currency Stock Chart" />
+
+                        <BarChart fx:id="currencyStockChart" prefHeight="150.0">
+                            <xAxis>
+                                <CategoryAxis label="Currency"/>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Stock Level"/>
+                            </yAxis>
+                        </BarChart>
+
+                        <Separator />
+
+                        <Label text="Branch Performance Chart" />
+
+                        <LineChart fx:id="branchPerformanceChart" prefHeight="150.0">
+                            <xAxis>
+                                <CategoryAxis label="Time"/>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Performance Metric"/>
+                            </yAxis>
+                        </LineChart>
+
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>

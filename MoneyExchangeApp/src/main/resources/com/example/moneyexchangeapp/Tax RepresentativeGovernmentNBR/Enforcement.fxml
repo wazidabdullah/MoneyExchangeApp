@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.TaxRepresentativeGovernmentNBR.EnforcementController">
+    <children>
+        <Label layoutX="40.0" layoutY="35.0" text="Regulatory Enforcement">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="40.0" layoutY="85.0" text="Current Volume" />
+        <TextField fx:id="currentVolumeField" layoutX="150.0" layoutY="81.0" prefWidth="200.0" promptText="0.00" />
+
+        <Button layoutX="370.0" layoutY="81.0" mnemonicParsing="false" onAction="#onAuditVolume" text="Check Limit" />
+
+        <Button layoutX="150.0" layoutY="130.0" mnemonicParsing="false" onAction="#onIssueNotice" prefHeight="40.0" prefWidth="200.0" text="Issue Legal Notice" />
+
+        <Label fx:id="enforcementLabel" layoutX="40.0" layoutY="210.0" prefHeight="25.0" prefWidth="400.0" text="Status: Unknown" textFill="#575757">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
