@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.FinancialReportsControler">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.FinancialReportsControler">
    <children>
       <Label layoutX="193.0" layoutY="14.0" text="Generate Financial Reports">
          <font>
@@ -25,7 +24,7 @@
       <ComboBox fx:id="cbReportType" layoutX="107.0" layoutY="143.0" prefWidth="150.0" />
       <Button fx:id="btnExport" layoutX="380.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleExport" text="Generate" />
       <Button fx:id="btnGenerate" layoutX="157.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleGenerate" text="Export" />
-      <TableView layoutX="334.0" layoutY="67.0" prefHeight="118.0" prefWidth="203.0">
+      <TableView fx:id="tblReports" layoutX="334.0" layoutY="67.0" prefHeight="118.0" prefWidth="203.0">
         <columns>
           <TableColumn fx:id="colItem" prefWidth="107.99996948242188" text="Item" />
           <TableColumn fx:id="colValue" prefWidth="94.66668701171875" text="Value" />

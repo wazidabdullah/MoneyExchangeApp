@@ -1,17 +1,20 @@
 module com.example.moneyexchangeapp {
     requires javafx.controls;
     requires javafx.fxml;
-<<<<<<< HEAD
+
     requires java.desktop;
-=======
+
     requires javafx.graphics;
->>>>>>> 12cb7ffbe734528ef9b421d610790c4cc5e90fc5
 
 
-    opens com.example.moneyexchangeapp to javafx.fxml;
+    opens com.example.moneyexchangeapp.EconomicResearcher to javafx.fxml, java.base;
+    opens com.example.moneyexchangeapp to javafx.fxml, java.base;
     exports com.example.moneyexchangeapp;
+
     exports com.example.moneyexchangeapp.BusinessCollaboratorRepresentative;
     opens com.example.moneyexchangeapp.BusinessCollaboratorRepresentative to javafx.fxml;
     exports com.example.TaxRepresentativeGovernmentNBR;
     opens com.example.TaxRepresentativeGovernmentNBR to javafx.fxml;
+    exports com.example.moneyexchangeapp.Customer;
+    opens com.example.moneyexchangeapp.Customer to java.base, javafx.fxml;
 }

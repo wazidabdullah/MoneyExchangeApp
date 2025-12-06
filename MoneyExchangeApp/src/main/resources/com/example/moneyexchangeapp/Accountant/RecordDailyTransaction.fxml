@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.RecordDailyTransactionController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.RecordDailyTransactionController">
    <children>
       <Label layoutX="186.0" layoutY="3.0" text="Record Daily Currency Transaction">
          <font>
@@ -29,7 +28,7 @@
       <Label layoutX="47.0" layoutY="126.0" text="Branch ID" />
       <Button fx:id="btnValidate" layoutX="73.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleValidate" text="Validate" />
       <Button fx:id="btnSave" layoutX="453.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleSaveTransaction" text="Save Transaction" />
-      <TableView layoutX="21.0" layoutY="226.0" prefHeight="106.0" prefWidth="543.0">
+      <TableView fx:id="tblTransaction" layoutX="21.0" layoutY="226.0" prefHeight="106.0" prefWidth="543.0">
         <columns>
           <TableColumn fx:id="colCurrency" prefWidth="75.0" text="Currency" />
           <TableColumn fx:id="colType" prefWidth="75.0" text="Type" />

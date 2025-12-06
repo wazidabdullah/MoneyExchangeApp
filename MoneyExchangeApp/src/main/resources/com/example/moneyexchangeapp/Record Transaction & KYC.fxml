@@ -15,7 +15,7 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="17.0" layoutY="117.0" text="Customer Name" />
+      <Label layoutX="17.0" layoutY="117.0" text="com.example.moneyexchangeapp.Customer Name" />
       <TextField layoutX="119.0" layoutY="113.0" />
       <Label layoutX="18.0" layoutY="200.0" prefHeight="18.0" prefWidth="59.0" text="Amount" />
       <TextField layoutX="103.0" layoutY="196.0" />

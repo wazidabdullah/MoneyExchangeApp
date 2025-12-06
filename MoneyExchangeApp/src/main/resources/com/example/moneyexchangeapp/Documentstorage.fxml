@@ -21,7 +21,7 @@
                             <root>
                                 <TreeItem value="Documents">
                                     <children>
-                                        <TreeItem value="Customer IDs" />
+                                        <TreeItem value="com.example.moneyexchangeapp.Customer IDs" />
                                         <TreeItem value="Receipts" />
                                         <TreeItem value="Others" />
                                     </children>

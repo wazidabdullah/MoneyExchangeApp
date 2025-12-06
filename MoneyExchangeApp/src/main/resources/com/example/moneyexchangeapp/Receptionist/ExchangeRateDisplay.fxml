@@ -7,15 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.ExchangeRateDisplayController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Receptionist.ExchangeRateDisplayController">
    <children>
       <Label layoutX="208.0" layoutY="21.0" text="Live Currency Exchange Rates">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TableView layoutX="166.0" layoutY="84.0" prefHeight="133.0" prefWidth="279.0">
+      <TableView fx:id="tblExchangeRates" layoutX="166.0" layoutY="84.0" prefHeight="133.0" prefWidth="279.0">
         <columns>
           <TableColumn fx:id="colCurrency" prefWidth="90.666748046875" text="Currency Code" />
           <TableColumn fx:id="colBuyRate" prefWidth="96.66668701171875" text="Buy Rate" />

@@ -7,12 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.ComplianceDashboardController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.ComplianceDashboardController">
    <children>
       <Button fx:id="btnViewDetails" layoutX="72.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleViewDetails" text="View Details" />
       <Button fx:id="btnMarkResolved" layoutX="433.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleResolve" text="Mark as Resolved" />
-      <TableView layoutX="164.0" layoutY="56.0" prefHeight="130.0" prefWidth="262.0">
+      <TableView fx:id="tblCompliance" layoutX="164.0" layoutY="56.0" prefHeight="130.0" prefWidth="262.0">
         <columns>
           <TableColumn fx:id="colIndicator" prefWidth="75.0" text="Indicator" />
           <TableColumn fx:id="colStatus" prefWidth="108.6666259765625" text="Status (OK/Issue)" />
