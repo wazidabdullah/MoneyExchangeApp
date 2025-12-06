@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="RateAlertAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.Customer.RateAlertViewController">
+   <children>
+      <Label layoutX="243.0" layoutY="14.0" text="Rate Alert">
+         <font>
+            <Font name="Playbill" size="47.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="CurrencyComboBox" layoutX="22.0" layoutY="98.0" prefWidth="150.0" />
+      <ComboBox fx:id="ConditionComboBox" layoutX="195.0" layoutY="98.0" prefWidth="150.0" />
+      <Button layoutX="440.0" layoutY="140.0" mnemonicParsing="false" onAction="#SetAlertButtonOnAction" prefHeight="15.0" prefWidth="72.0" text="Set Alert" />
+      <ComboBox fx:id="AlertTypeComboBox" layoutX="365.0" layoutY="98.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="74.0" text="Currency : " />
+      <Label layoutX="195.0" layoutY="74.0" text="Condition : " />
+      <Label layoutX="365.0" layoutY="74.0" text="Alert Type : " />
+      <Button layoutX="512.0" layoutY="14.0" mnemonicParsing="false" onAction="#HomeButtonOnAction" prefHeight="15.0" prefWidth="72.0" text="Home" />
+      <TableView fx:id="RateAlertTableView" layoutX="-3.0" layoutY="200.0" prefHeight="200.0" prefWidth="609.0">
+        <columns>
+          <TableColumn fx:id="DateTableColumn" prefWidth="127.20004415512085" text="Date" />
+          <TableColumn fx:id="CurrencyTableColumn" minWidth="0.0" prefWidth="158.39996337890625" text="Currency" />
+            <TableColumn fx:id="ConditionTableColumn" prefWidth="156.0" text="Condition" />
+            <TableColumn fx:id="AlertTypeTableColumn" prefWidth="168.80007934570312" text="Alert Type" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

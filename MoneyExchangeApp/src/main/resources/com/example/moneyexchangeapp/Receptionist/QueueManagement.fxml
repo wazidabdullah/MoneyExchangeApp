@@ -12,13 +12,13 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.QueueManagementController">
    <children>
-      <Label layoutX="198.0" layoutY="14.0" text="Customer Queue Management">
+      <Label layoutX="198.0" layoutY="14.0" text="com.example.moneyexchangeapp.Customer Queue Management">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <Label layoutX="66.0" layoutY="52.0" text="Token No" />
-      <Label layoutX="42.0" layoutY="90.0" text="Customer Name" />
+      <Label layoutX="42.0" layoutY="90.0" text="com.example.moneyexchangeapp.Customer Name" />
       <Label layoutX="52.0" layoutY="127.0" text="Service Type" />
       <Label layoutX="69.0" layoutY="161.0" text="Status" />
       <TextField fx:id="txtToeknNo" layoutX="143.0" layoutY="48.0" />
@@ -29,7 +29,7 @@
       <TableView layoutX="129.0" layoutY="219.0" prefHeight="116.0" prefWidth="371.0">
         <columns>
           <TableColumn fx:id="colToken" prefWidth="75.0" text="Token No" />
-          <TableColumn fx:id="colCustomerName" prefWidth="110.0" text="Customer Name" />
+          <TableColumn fx:id="colCustomerName" prefWidth="110.0" text="com.example.moneyexchangeapp.Customer Name" />
             <TableColumn fx:id="colServiceType" prefWidth="87.333251953125" text="Service Type" />
             <TableColumn fx:id="colStatus" prefWidth="97.33333333333331" text="Status" />
         </columns>

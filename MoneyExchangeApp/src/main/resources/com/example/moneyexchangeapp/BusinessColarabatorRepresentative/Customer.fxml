@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.BusinessCollaboratorRepresentative.CustomerController">
     <children>
-        <Label layoutX="35.0" layoutY="31.0" text="Customer KYC Validation">
+        <Label layoutX="35.0" layoutY="31.0" text="com.example.moneyexchangeapp.Customer KYC Validation">
             <font>
                 <Font size="20.0" />
             </font>

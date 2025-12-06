@@ -15,9 +15,9 @@
             <Font name="System Bold" size="31.0" />
          </font>
       </Label>
-      <ComboBox layoutX="24.0" layoutY="115.0" prefWidth="150.0" promptText="Customer Typle" />
+      <ComboBox layoutX="24.0" layoutY="115.0" prefWidth="150.0" promptText="com.example.moneyexchangeapp.Customer Typle" />
       <TextArea layoutX="8.0" layoutY="149.0" prefHeight="200.0" prefWidth="286.0" />
-      <ComboBox layoutX="14.0" layoutY="365.0" prefHeight="26.0" prefWidth="185.0" promptText="Customer Acknowledged" />
+      <ComboBox layoutX="14.0" layoutY="365.0" prefHeight="26.0" prefWidth="185.0" promptText="com.example.moneyexchangeapp.Customer Acknowledged" />
       <Button layoutX="24.0" layoutY="410.0" mnemonicParsing="false" text="Submit" />
       <Button layoutX="640.0" layoutY="505.0" mnemonicParsing="false" text="Logout" />
    </children>

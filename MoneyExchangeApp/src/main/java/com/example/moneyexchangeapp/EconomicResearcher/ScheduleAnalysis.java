@@ -1,8 +1,10 @@
 package com.example.moneyexchangeapp.EconomicResearcher;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class ScheduleAnalysis {
+public class ScheduleAnalysis implements Serializable{
 
     private String analysisType;
     private LocalDate scheduledDate;
@@ -11,6 +13,7 @@ public class ScheduleAnalysis {
     public String getAnalysisType() {
         return analysisType;
     }
+
 
     public void setAnalysisType(String analysisType) {
         this.analysisType = analysisType;
@@ -36,6 +39,12 @@ public class ScheduleAnalysis {
         this.analysisType = analysisType;
         this.scheduledDate = scheduledDate;
         this.emailNotification = emailNotification;
+    }
+
+
+        public String getEmailNotificationText() {
+            return emailNotification ? "Yes" : "No";
+
     }
 
     @Override

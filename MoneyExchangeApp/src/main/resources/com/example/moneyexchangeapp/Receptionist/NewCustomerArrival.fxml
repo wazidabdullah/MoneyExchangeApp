@@ -13,7 +13,7 @@
       <TextField fx:id="txtReason" layoutX="148.0" layoutY="117.0" />
       <Button fx:id="btnGenerateId" layoutX="126.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleGenerateVisitorId" text="Generate Visitor ID" />
       <Button fx:id="btnSaveArrival" layoutX="308.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleSaveArrival" text="Save &amp; Continue" />
-      <Label layoutX="215.0" layoutY="15.0" text="New Customer Arrival">
+      <Label layoutX="215.0" layoutY="15.0" text="New com.example.moneyexchangeapp.Customer Arrival">
          <font>
             <Font size="15.0" />
          </font>

@@ -11,15 +11,15 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.CustomerRegistrationController">
    <children>
-      <Label layoutX="219.0" layoutY="14.0" text="Customer Registration">
+      <Label layoutX="219.0" layoutY="14.0" text="com.example.moneyexchangeapp.Customer Registration">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <Label layoutX="21.0" layoutY="106.0" text="Contact Number" />
-      <Label layoutX="22.0" layoutY="58.0" text="Customer Name" />
+      <Label layoutX="22.0" layoutY="58.0" text="com.example.moneyexchangeapp.Customer Name" />
       <Label layoutX="325.0" layoutY="58.0" text="Purpose of Visit" />
-      <Label layoutX="283.0" layoutY="106.0" text="Generated Customer ID" />
+      <Label layoutX="283.0" layoutY="106.0" text="Generated com.example.moneyexchangeapp.Customer ID" />
       <TextField fx:id="txtCustomerName" layoutX="122.0" layoutY="54.0" />
       <TextField fx:id="txtContact" layoutX="122.0" layoutY="102.0" />
       <TextField fx:id="txtPurpose" layoutX="423.0" layoutY="54.0" />
@@ -27,9 +27,9 @@
       <Button fx:id="btnSubmitRegistration" layoutX="256.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleSubmitRegistration" text="Submit" />
       <TableView layoutX="123.0" layoutY="222.0" prefHeight="129.0" prefWidth="363.0">
         <columns>
-          <TableColumn fx:id="colCustomerName" prefWidth="128.66665649414062" text="Customer Name" />
+          <TableColumn fx:id="colCustomerName" prefWidth="128.66665649414062" text="com.example.moneyexchangeapp.Customer Name" />
           <TableColumn fx:id="colContactNumber" prefWidth="114.66668701171875" text="Contact Number" />
-            <TableColumn fx:id="colCustomerID" prefWidth="119.333251953125" text="Customer ID" />
+            <TableColumn fx:id="colCustomerID" prefWidth="119.333251953125" text="com.example.moneyexchangeapp.Customer ID" />
         </columns>
       </TableView>
    </children>
