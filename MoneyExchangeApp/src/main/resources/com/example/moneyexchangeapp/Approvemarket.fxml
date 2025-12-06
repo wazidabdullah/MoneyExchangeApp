@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="com.exampleApproveMarketingController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="900.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.30" prefHeight="500.0" prefWidth="900.0">
+            <items>
+
+                <!-- LEFT PANEL -->
+                <VBox spacing="10" prefWidth="250">
+                    <children>
+                        <Label text="Marketing Sections" />
+
+                        <TreeView fx:id="marketingTree">
+                            <root>
+                                <TreeItem value="Campaign Approvals">
+                                    <children>
+                                        <TreeItem value="Pending Campaigns" />
+                                        <TreeItem value="Approved Campaigns" />
+                                        <TreeItem value="Rejected Campaigns" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+
+                    </children>
+                </VBox>
+
+                <!-- RIGHT PANEL -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Marketing Approvals Dashboard" />
+
+                        <TableView fx:id="campaignTable" prefHeight="250">
+                            <columns>
+                                <TableColumn text="Campaign Name" prefWidth="250" />
+                                <TableColumn text="Estimated ROI" prefWidth="150" />
+                                <TableColumn text="Status" prefWidth="100" />
+                            </columns>
+                        </TableView>
+
+                        <HBox spacing="15">
+                            <children>
+                                <Button text="Approve" fx:id="btnApprove" onAction="#handleApprove" />
+                                <Button text="Reject" fx:id="btnReject" onAction="#handleReject" />
+                                <Button text="Refresh" onAction="#handleRefresh" />
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <Label text="Finance Update / Audit Log" />
+                        <TextArea fx:id="taFinanceAudit" prefHeight="120" editable="false" />
+
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>

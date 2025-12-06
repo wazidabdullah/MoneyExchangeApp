@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="com.exampleBusinessStrategyController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="900.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.30" prefHeight="500.0" prefWidth="900.0">
+            <items>
+
+                <!-- LEFT PANEL -->
+                <VBox spacing="10" prefWidth="250">
+                    <children>
+                        <Label text="Strategy Sections" />
+
+                        <TreeView fx:id="strategyTree">
+                            <root>
+                                <TreeItem value="Business Strategy">
+                                    <children>
+                                        <TreeItem value="Branch Expansion" />
+                                        <TreeItem value="New Service Launch" />
+                                        <TreeItem value="Board Review" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+
+                    </children>
+                </VBox>
+
+                <!-- RIGHT PANEL -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Business Strategy Dashboard" />
+
+                        <GridPane hgap="10" vgap="12">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="30"/>
+                                <ColumnConstraints percentWidth="70"/>
+                            </columnConstraints>
+
+                            <Label text="Potential Branch/Service:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfProposal" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                            <Label text="Projected ROI:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfROI" editable="false" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                            <Label text="Operational Cost:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfCost" editable="false" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                            <Label text="Notes:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                            <TextArea fx:id="taNotes" prefRowCount="3" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        </GridPane>
+
+                        <HBox spacing="15">
+                            <children>
+                                <Button text="Estimate" fx:id="btnEstimate" onAction="#handleEstimate" />
+                                <Button text="Submit Proposal" fx:id="btnSubmit" onAction="#handleSubmit" />
+                                <Button text="Refresh" onAction="#handleRefresh" />
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <Label text="Evaluation Log" />
+                        <TextArea fx:id="taEvaluationLog" prefHeight="120" editable="false" />
+
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>

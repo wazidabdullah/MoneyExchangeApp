@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.TaxRepresentativeGovernmentNBR.AuditLogController">
+    <children>
+        <Label layoutX="35.0" layoutY="30.0" text="System Audit Logs">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="logDisplayArea" layoutX="35.0" layoutY="70.0" prefHeight="240.0" prefWidth="530.0" editable="false" />
+
+        <Button layoutX="35.0" layoutY="330.0" mnemonicParsing="false" onAction="#onRefreshLogs" text="Refresh Feed" />
+        <Button layoutX="140.0" layoutY="330.0" mnemonicParsing="false" onAction="#onExportLogs" text="Export to File" />
+
+        <Label fx:id="statusLabel" layoutX="300.0" layoutY="334.0" prefHeight="17.0" prefWidth="250.0" textAlignment="RIGHT" textFill="#808080" />
+    </children>
+</AnchorPane>

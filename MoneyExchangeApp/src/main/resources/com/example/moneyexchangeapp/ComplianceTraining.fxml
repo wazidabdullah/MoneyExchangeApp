@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="com.exampleComplianceTrainingController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <children>
+
+        <SplitPane dividerPositions="0.25" prefHeight="500.0" prefWidth="800.0">
+            <items>
+
+                <!-- LEFT SIDE -->
+                <VBox spacing="10">
+                    <children>
+                        <Label text="Compliance Sections" />
+                        <TreeView fx:id="trainingTree">
+                            <root>
+                                <TreeItem value="Compliance">
+                                    <children>
+                                        <TreeItem value="AML/KYC Training" />
+                                        <TreeItem value="STR Reporting" />
+                                    </children>
+                                </TreeItem>
+                            </root>
+                        </TreeView>
+                    </children>
+                </VBox>
+
+                <!-- RIGHT SIDE -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Training &amp; Compliance" />
+
+                        <HBox spacing="10">
+                            <children>
+                                <Button text="Start Training" fx:id="startTrainingButton"
+                                        onAction="#handleStartTraining"/>
+                                <Label text="Not started" fx:id="trainingStatusLabel"/>
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <HBox spacing="10">
+                            <children>
+                                <Button text="Submit STR Report" fx:id="submitSTRButton"
+                                        onAction="#handleSubmitSTR"/>
+                                <Label text="No report submitted" fx:id="strStatusLabel"/>
+                            </children>
+                        </HBox>
+
+                        <Separator />
+
+                        <Label text="Completed Trainings" />
+
+                        <TableView fx:id="completedTrainingsTable" prefHeight="300.0">
+                            <columns>
+                                <TableColumn text="Training Name" prefWidth="250.0"/>
+                                <TableColumn text="Completion Date" prefWidth="150.0"/>
+                                <TableColumn text="Acknowledged By" prefWidth="150.0"/>
+                            </columns>
+                        </TableView>
+
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+    </children>
+
+</AnchorPane>

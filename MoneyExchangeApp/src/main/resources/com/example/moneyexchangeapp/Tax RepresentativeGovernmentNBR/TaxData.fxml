@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.TaxRepresentativeGovernmentNBR.TaxDataController">
+    <children>
+        <Label layoutX="40.0" layoutY="36.0" text="Tax Data Management">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="40.0" layoutY="90.0" text="Transaction Volume" />
+        <TextField fx:id="volumeField" layoutX="170.0" layoutY="86.0" prefWidth="200.0" promptText="Amount in USD" />
+        <Button layoutX="390.0" layoutY="86.0" mnemonicParsing="false" onAction="#onCalculateTax" text="Calculate Tax" />
+
+        <Label layoutX="40.0" layoutY="140.0" text="Tax ID / User ID" />
+        <TextField fx:id="taxIdField" layoutX="170.0" layoutY="136.0" prefWidth="200.0" />
+
+        <Button layoutX="170.0" layoutY="180.0" mnemonicParsing="false" onAction="#onCheckNBR" prefWidth="90.0" text="Check NBR" />
+        <Button layoutX="280.0" layoutY="180.0" mnemonicParsing="false" onAction="#onFlagSuspicious" prefWidth="90.0" style="-fx-text-fill: red;" text="Flag User" />
+
+        <Label fx:id="resultLabel" layoutX="40.0" layoutY="250.0" prefHeight="17.0" prefWidth="450.0" text="System Idle..." textFill="#4d4d4d" />
+    </children>
+</AnchorPane>
