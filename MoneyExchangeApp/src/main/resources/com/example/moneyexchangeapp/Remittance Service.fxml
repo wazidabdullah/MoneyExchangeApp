@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="505.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exampleRemittanceServicecontroller">
+<AnchorPane prefHeight="505.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.salesexecutive.exampleRemittanceServicecontroller">
    <children>
       <Label layoutX="205.0" layoutY="56.0" prefHeight="18.0" prefWidth="258.0" text="Remittance Service">
          <font>

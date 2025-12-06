@@ -1,4 +1,4 @@
-package com;
+package com.example.moneyexchangeapp.owner;
 
 public class OwnerWorkflow { private String adminID;
 

@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:controller="com.exampleTaxSubmissionController"
+<AnchorPane fx:controller="com.example.moneyexchangeapp.salesexecutive.exampleTaxSubmissionController"
             xmlns="http://javafx.com/javafx/8"
             xmlns:fx="http://javafx.com/fxml/1"
             prefHeight="500.0" prefWidth="900.0">

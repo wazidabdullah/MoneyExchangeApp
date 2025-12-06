@@ -1,4 +1,4 @@
-package com;
+package com.example.moneyexchangeapp.owner;
 
 public class servicepromotion { private String username;
     private String password;

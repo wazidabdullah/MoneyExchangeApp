@@ -1,4 +1,4 @@
-package com;
+package com.example.moneyexchangeapp.salesexecutive;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;

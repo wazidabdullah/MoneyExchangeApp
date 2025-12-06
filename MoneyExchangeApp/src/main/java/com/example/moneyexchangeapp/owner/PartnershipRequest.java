@@ -1,8 +1,7 @@
-package com;
+package com.example.moneyexchangeapp.owner;
 
-public class ComplianceReport {private String requestID;
+public class PartnershipRequest {private String requestID;
     private String partnerName;
-    private String status;
 
     public String getRequestID() {
         return requestID;
@@ -10,7 +9,7 @@ public class ComplianceReport {private String requestID;
 
     @Override
     public String toString() {
-        return "ComplianceReport{" +
+        return "PartnershipRequest{" +
                 "requestID='" + requestID + '\'' +
                 ", partnerName='" + partnerName + '\'' +
                 ", status='" + status + '\'' +
@@ -37,9 +36,11 @@ public class ComplianceReport {private String requestID;
         this.status = status;
     }
 
-    public ComplianceReport(String requestID, String partnerName, String status) {
+    public PartnershipRequest(String requestID, String partnerName, String status) {
         this.requestID = requestID;
         this.partnerName = partnerName;
         this.status = status;
     }
+
+    private String status;
 }

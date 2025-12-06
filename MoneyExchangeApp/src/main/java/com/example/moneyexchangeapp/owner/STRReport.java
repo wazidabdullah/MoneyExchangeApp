@@ -1,4 +1,4 @@
-package com;
+package com.example.moneyexchangeapp.owner;
 
 import java.util.Date;
 

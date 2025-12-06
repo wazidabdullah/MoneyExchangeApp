@@ -1,4 +1,4 @@
-package com;
+package com.example.moneyexchangeapp.salesexecutive;
 
 public class exampleRemittanceServicecontroller
 {

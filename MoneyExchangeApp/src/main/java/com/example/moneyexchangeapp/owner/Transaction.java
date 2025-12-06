@@ -1,4 +1,4 @@
-package com;
+package com.example.moneyexchangeapp.owner;
 
 public class Transaction {private String transactionID;
     private String currency;
