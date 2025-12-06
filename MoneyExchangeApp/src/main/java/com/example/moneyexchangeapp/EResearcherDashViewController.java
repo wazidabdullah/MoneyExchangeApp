@@ -1,14 +1,14 @@
 package com.example.moneyexchangeapp;
 
-<<<<<<< HEAD
+
 import javafx.scene.control.Label;
-=======
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
->>>>>>> 2f7b428da25864eafa69eb5a19f073ee5c145b14
+
 
 public class EResearcherDashViewController
 {

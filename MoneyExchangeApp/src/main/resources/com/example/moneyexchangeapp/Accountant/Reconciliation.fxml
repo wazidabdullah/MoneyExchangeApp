@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moneyexchangeapp.ReconciliationController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.ReconciliationController">
    <children>
       <Label layoutX="215.0" layoutY="14.0" text="Cash &amp; Bank Reconciliation">
          <font>
@@ -18,7 +17,7 @@
       </Label>
       <Button fx:id="btnImportBank" layoutX="118.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleImport" text="Import Bank Statement" />
       <Button fx:id="btnStartRecon" layoutX="354.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleStartRecon" text="Start Reconciliation" />
-      <TableView layoutX="114.0" layoutY="114.0" prefHeight="112.0" prefWidth="342.0">
+      <TableView fx:id="tblReconciliation" layoutX="114.0" layoutY="114.0" prefHeight="112.0" prefWidth="342.0">
         <columns>
           <TableColumn fx:id="colSystemAmount" prefWidth="101.33334350585938" text="System Amount" />
           <TableColumn fx:id="colBankAmount" prefWidth="84.66668701171875" text="Bank Amount" />
