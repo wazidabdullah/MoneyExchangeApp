@@ -13,7 +13,6 @@ public class NotificationController {
     @FXML private TextArea messageArea;
     @FXML private Label statusLabel;
 
-    // Link to Model
     private NotificationManager notificationManager = new NotificationManager();
 
     @FXML
