@@ -13,7 +13,6 @@ public class AuditLogger {
     public void logTransaction(String txId, String action) {
         String timestamp = LocalDateTime.now().toString();
         System.out.println("[LOG " + timestamp + "] TxID: " + txId + " | Action: " + action);
-        // In a real app, this would write to the text file
     }
 
     public void exportLogs() {
