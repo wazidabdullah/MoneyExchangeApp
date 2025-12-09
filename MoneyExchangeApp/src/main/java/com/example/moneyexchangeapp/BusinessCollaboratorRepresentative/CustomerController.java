@@ -18,7 +18,6 @@ public class CustomerController {
 
     @FXML
     void onReviewKYC(ActionEvent event) {
-        // UML: reviewKYC(data)
         String name = customerNameField.getText();
         if (name.isEmpty()) {
             kycStatusLabel.setText("Enter customer name.");
@@ -29,7 +28,6 @@ public class CustomerController {
 
     @FXML
     void onCheckAMLFlags(ActionEvent event) {
-        // UML: checkAMLFlags(tx)
         kycStatusLabel.setText("AML Check: No suspicious flags found.");
     }
 }
