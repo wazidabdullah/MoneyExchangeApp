@@ -15,7 +15,6 @@ public class CurrencyController {
 
     @FXML
     void onFetchRealTimeRates(ActionEvent event) {
-        // UML: fetchRealTimeRates()
         String pair = currencyPairField.getText();
 
         if (pair.isEmpty()) {
@@ -23,13 +22,11 @@ public class CurrencyController {
             return;
         }
 
-        // Mocking a fetch
         rateLabel.setText("Current Rate for " + pair + ": 1.0542");
     }
 
     @FXML
     void onValidateKey(ActionEvent event) {
-        // UML: validateAPIKey()
         rateLabel.setText("Internal API Key Validated.");
     }
 }
