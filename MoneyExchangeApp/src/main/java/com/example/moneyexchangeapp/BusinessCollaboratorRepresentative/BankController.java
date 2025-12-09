@@ -18,7 +18,6 @@ public class BankController {
 
     @FXML
     void onSubmitApiKey(ActionEvent event) {
-        // UML: submitAPIKey()
         String endpoint = apiEndpointField.getText();
         if (endpoint.isEmpty()) {
             statusLabel.setText("Error: Endpoint required.");
@@ -29,7 +28,6 @@ public class BankController {
 
     @FXML
     void onReceiveConfirmation(ActionEvent event) {
-        // UML: receiveConfirmation()
         statusLabel.setText("Connection Confirmed: Secure.");
     }
 }
