@@ -13,7 +13,6 @@ public class NotificationManager {
     }
 
     public void notifyTeams(String department, String message) {
-        // Simulating sending an email to a department
         System.out.println("[EMAIL] To: " + department + "@agency.gov | Subject: Urgent | Body: " + message);
     }
 }
