@@ -20,7 +20,6 @@ public class Bank {
         return false;
     }
 
-    // Getters and Setters
     public String getBankName() { return bankName; }
     public void setBankName(String bankName) { this.bankName = bankName; }
 
