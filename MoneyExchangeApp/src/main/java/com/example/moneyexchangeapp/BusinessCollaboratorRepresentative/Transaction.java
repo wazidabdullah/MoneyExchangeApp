@@ -25,7 +25,6 @@ public class Transaction {
         }
     }
 
-    // Getters and Setters
     public String getSwiftCode() { return swiftCode; }
     public void setSwiftCode(String swiftCode) { this.swiftCode = swiftCode; }
 
