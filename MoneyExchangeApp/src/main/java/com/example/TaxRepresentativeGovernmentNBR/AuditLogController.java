@@ -14,7 +14,6 @@ public class AuditLogController {
 
     @FXML
     public void initialize() {
-        // Simulating loading existing logs
         logDisplayArea.setText("[LOG 2025-12-02 10:00] System Start\n[LOG 2025-12-02 10:05] User Login: Admin\n");
     }
 
