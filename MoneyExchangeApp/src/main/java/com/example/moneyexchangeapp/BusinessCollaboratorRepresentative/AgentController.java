@@ -19,7 +19,6 @@ public class AgentController {
     @FXML
     void onApproveTransaction(ActionEvent event) {
         log("Attempting to approve transaction...");
-        // In a real app, we would validate the ID here
         log("Transaction approved for ID: " + collaboratorIdField.getText());
     }
 
