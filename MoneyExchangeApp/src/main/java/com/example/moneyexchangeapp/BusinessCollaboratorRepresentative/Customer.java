@@ -21,7 +21,6 @@ public class Customer {
     }
 
     public boolean checkAMLFlags() {
-        // Simple logic: if name is "Suspicious", flag it
         if ("Suspicious".equalsIgnoreCase(fullName)) {
             System.out.println("AML ALERT: Suspicious activity detected!");
             return true;
@@ -29,7 +28,6 @@ public class Customer {
         return false;
     }
 
-    // Getters and Setters
     public String getFullName() { return fullName; }
     public void setFullName(String fullName) { this.fullName = fullName; }
 
