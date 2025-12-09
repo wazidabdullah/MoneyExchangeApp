@@ -2,8 +2,7 @@ package com.example.TaxRepresentativeGovernmentNBR;
 
 public class Admin {
     private String repId;
-    private String accessLevel; // e.g., "Auditor", "Enforcement"
-
+    private String accessLevel; 
     public Admin(String repId, String accessLevel) {
         this.repId = repId;
         this.accessLevel = accessLevel;
@@ -21,7 +20,6 @@ public class Admin {
         }
     }
 
-    // Getters and Setters
     public String getRepId() { return repId; }
     public void setRepId(String repId) { this.repId = repId; }
 
