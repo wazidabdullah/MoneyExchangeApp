@@ -17,7 +17,6 @@ public class Agent {
         System.out.println("Risk analysis running for Agent: " + collaboratorId);
     }
 
-    // Getters and Setters
     public String getCollaboratorId() { return collaboratorId; }
     public void setCollaboratorId(String collaboratorId) { this.collaboratorId = collaboratorId; }
 
